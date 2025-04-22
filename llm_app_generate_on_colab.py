@@ -5,7 +5,7 @@ from pydantic import BaseModel
 import requests
 import yaml
 
-from actions import (
+from actions_android import (
     call_911, create_transcript, call_caretaker, activate_video, ask_for_details,
     call_taxi, call_ambulance, request_pharma_uber, call_sos_medecin, locate_pharmacy
 )
