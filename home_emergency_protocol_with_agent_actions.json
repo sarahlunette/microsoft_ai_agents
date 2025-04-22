@@ -1,0 +1,246 @@
+{
+    "protocol_name": "Guardian Agent: Home Emergency Protocol",
+    "description": "Protocol for handling all types of home emergencies, including minor and non-911 events. Used to prompt LLMs and autonomous systems.",
+    "categories": [
+        {
+            "category": "Minor Injuries",
+            "severity": "Level 1 \u2013 Informational",
+            "examples": [
+                "Paper cut",
+                "Stubbed toe",
+                "Minor burn",
+                "Bumped head"
+            ],
+            "llm_prompt_type": "Provide calm, step-by-step home care advice",
+            "system_actions": [
+                "Suggest first-aid kit location",
+                "Voice soothe",
+                "Log incident"
+            ],
+            "escalation": "Escalate to Level 2 if symptoms worsen (e.g. bleeding doesn't stop)",
+            "agent_actions": [
+                "Suggest first-aid kit location",
+                "Propose to ask pharmaceutical Uber service for Doliprane or similar",
+                "Voice soothe",
+                "Log incident",
+                "Ask details or photo input",
+                "Create transcript of description for caretaker if needed"
+            ]
+        },
+        {
+            "category": "Moderate Medical Discomfort",
+            "severity": "Level 2 \u2013 Monitor",
+            "examples": [
+                "Dizziness",
+                "Headache",
+                "Stomach pain",
+                "Mild allergic reaction"
+            ],
+            "llm_prompt_type": "Ask clarifying questions, suggest monitoring or simple remedies",
+            "system_actions": [
+                "Log symptoms",
+                "Suggest hydration or rest"
+            ],
+            "escalation": "Escalate to medical care if symptoms persist or worsen",
+            "agent_actions": [
+                "Create transcript for caretaker",
+                "Suggest hydration or rest",
+                "Call caretaker",
+                "Reach the nearest open pharmacy",
+                "Propose to call SOS M\u00e9decin",
+                "Log symptoms",
+                "Ask details or photo input"
+            ]
+        },
+        {
+            "category": "Appliance / Utility Malfunctions",
+            "severity": "Level 2 \u2013 Moderate",
+            "examples": [
+                "Dishwasher leaking",
+                "Fridge not cooling",
+                "No hot water"
+            ],
+            "llm_prompt_type": "Guide user through troubleshooting steps",
+            "system_actions": [
+                "Cut power",
+                "Ping technician or landlord"
+            ],
+            "escalation": "Notify maintenance if unresolved within a set time",
+            "agent_actions": [
+                "Create transcript for caretaker",
+                "Call caretaker",
+                "Reach the nearest open pharmacy",
+                "Propose to call SOS M\u00e9decin",
+                "Cut power",
+                "Ping technician or landlord",
+                "Ask details or photo input"
+            ]
+        },
+        {
+            "category": "Environmental Issues (Low to Moderate Risk)",
+            "severity": "Level 2\u20133 \u2013 Warning",
+            "examples": [
+                "Mold smell",
+                "Humidity too high",
+                "Small leak"
+            ],
+            "llm_prompt_type": "Suggest mitigation (e.g., ventilation)",
+            "system_actions": [
+                "Adjust HVAC",
+                "Log and monitor sensors"
+            ],
+            "escalation": "Escalate to Level 3 if threshold persists",
+            "agent_actions": [
+                "Create transcript for caretaker",
+                "Call caretaker",
+                "Log and monitor sensors",
+                "Reach the nearest open pharmacy",
+                "Propose to call SOS M\u00e9decin",
+                "Adjust HVAC",
+                "Ask details or photo input"
+            ]
+        },
+        {
+            "category": "High-Risk Environmental Danger",
+            "severity": "Level 4 \u2013 Critical",
+            "examples": [
+                "Fire",
+                "Gas leak",
+                "Carbon monoxide detected"
+            ],
+            "llm_prompt_type": "Urgent: Initiate evacuation, guide user out",
+            "system_actions": [
+                "Sound alarm",
+                "Unlock doors",
+                "Notify emergency contact"
+            ],
+            "escalation": "Auto-call 911 if unresponsive",
+            "agent_actions": [
+                "Create transcript for caretaker",
+                "Call a taxi",
+                "Notify emergency contact",
+                "Create transcript of description for 911",
+                "Call caretaker",
+                "Call 911",
+                "Reach the nearest open pharmacy",
+                "Activate video",
+                "Sound alarm",
+                "Unlock doors",
+                "Call an ambulance"
+            ]
+        },
+        {
+            "category": "False Alarms / Confusion",
+            "severity": "Level 1 \u2013 Informational",
+            "examples": [
+                "Smoke from cooking",
+                "Sensor glitch"
+            ],
+            "llm_prompt_type": "Verify with user, ask confirmatory questions",
+            "system_actions": [
+                "Pause alarm",
+                "Log event"
+            ],
+            "escalation": "Escalate to Level 2 if user does not confirm safety",
+            "agent_actions": [
+                "Log event",
+                "Pause alarm",
+                "Propose to ask pharmaceutical Uber service for Doliprane or similar",
+                "Ask details or photo input",
+                "Create transcript of description for caretaker if needed"
+            ]
+        },
+        {
+            "category": "Cognitive / Mental Discomfort",
+            "severity": "Level 2 \u2013 Medium Risk",
+            "examples": [
+                "Feeling lost",
+                "Panic",
+                "Sadness",
+                "Forgetfulness"
+            ],
+            "llm_prompt_type": "Offer emotional support and optional caregiver contact",
+            "system_actions": [
+                "Play calming music",
+                "Ask grounding questions"
+            ],
+            "escalation": "Notify caregiver or therapist if distress persists",
+            "agent_actions": [
+                "Create transcript for caretaker",
+                "Call caretaker",
+                "Reach the nearest open pharmacy",
+                "Propose to call SOS M\u00e9decin",
+                "Ask grounding questions",
+                "Play calming music",
+                "Ask details or photo input"
+            ]
+        },
+        {
+            "category": "Security Concerns (Not Active Threats)",
+            "severity": "Level 2 \u2013 Monitor",
+            "examples": [
+                "Door left open",
+                "Unknown person detected"
+            ],
+            "llm_prompt_type": "Ask user if they want to activate safety protocols",
+            "system_actions": [
+                "Lock doors",
+                "Send photo or video"
+            ],
+            "escalation": "Escalate to Level 3 if user confirms threat",
+            "agent_actions": [
+                "Create transcript for caretaker",
+                "Lock doors",
+                "Call caretaker",
+                "Reach the nearest open pharmacy",
+                "Propose to call SOS M\u00e9decin",
+                "Send photo or video",
+                "Ask details or photo input"
+            ]
+        },
+        {
+            "category": "Unpleasant but Non-Hazardous Events",
+            "severity": "Level 1 \u2013 Informational",
+            "examples": [
+                "Bad smell",
+                "Loud neighbor",
+                "Flickering lights"
+            ],
+            "llm_prompt_type": "Log issue, ask if action is needed",
+            "system_actions": [
+                "Suggest mitigation (e.g. air purifier)",
+                "Adjust environment"
+            ],
+            "escalation": "Escalate if repeated or linked to health symptoms",
+            "agent_actions": [
+                "Propose to ask pharmaceutical Uber service for Doliprane or similar",
+                "Suggest mitigation (e.g. air purifier)",
+                "Adjust environment",
+                "Ask details or photo input",
+                "Create transcript of description for caretaker if needed"
+            ]
+        },
+        {
+            "category": "Housekeeping / Sanitary Issues",
+            "severity": "Level 1 \u2013 Informational",
+            "examples": [
+                "Trash overflow",
+                "Pet accident",
+                "Clutter"
+            ],
+            "llm_prompt_type": "Remind or schedule cleaning task",
+            "system_actions": [
+                "Add to to-do list",
+                "Notify cleaning robot"
+            ],
+            "escalation": "Escalate only if health hazard develops",
+            "agent_actions": [
+                "Notify cleaning robot",
+                "Propose to ask pharmaceutical Uber service for Doliprane or similar",
+                "Add to to-do list",
+                "Ask details or photo input",
+                "Create transcript of description for caretaker if needed"
+            ]
+        }
+    ]
+}
