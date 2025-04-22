@@ -1,0 +1,17 @@
+streamlit
+fastapi
+uvicorn
+pydantic
+pillow
+numpy
+opencv-python
+opencv-python-headless
+nest-asyncio
+pyngrok
+transformers
+openai
+python-dotenv
+requests
+Cython
+pyjnius
+whisper

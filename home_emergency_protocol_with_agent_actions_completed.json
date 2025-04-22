@@ -1,0 +1,190 @@
+{
+    "protocol_name": "Guardian Agent: Home Emergency Protocol",
+    "description": "Protocol for handling all types of home emergencies, including minor and non-911 events. Used to prompt LLMs and autonomous systems.",
+    "version": "1.1",
+    "last_updated": "2025-04-22",
+    "author": "Guardian Agent Team",
+    "contact": "support@guardianagent.ai",
+    "categories": [
+      {
+        "id": "cat-001",
+        "category": "Minor Injuries",
+        "severity": "Level 1 – Informational",
+        "examples": [
+          "Paper cut",
+          "Stubbed toe",
+          "Minor burn",
+          "Bumped head",
+          "Child scraped knee"
+        ],
+        "llm_prompt_type": "Provide calm, step-by-step home care advice",
+        "system_actions": [
+          "Suggest first-aid kit location",
+          "Voice soothe",
+          "Log incident",
+          "Call caretaker if child is involved"
+        ],
+        "agent_behavior": "Reassuring, informative",
+        "response_time": "Within 30 seconds",
+        "communication_mode": "Voice + On-screen instructions",
+        "recommended_devices": ["Smart speaker", "Display assistant", "Mobile app"],
+        "escalation": "Escalate to Level 2 if symptoms worsen (e.g. bleeding doesn't stop)",
+        "escalation_threshold": {
+          "bleeding_duration_minutes": 10,
+          "swelling_severity": "moderate"
+        },
+        "agent_actions": [
+          "call_caretaker",
+          "ask_for_details",
+          "create_transcript",
+          "request_pharma_uber",
+          "activate_video",
+          "call_number",
+          "call_ambulance"
+        ]
+      },
+      {
+        "id": "cat-002",
+        "category": "Child Medical Emergency",
+        "severity": "Level 3 – Urgent",
+        "examples": [
+          "Severe allergic reaction",
+          "High fever",
+          "Fainting",
+          "Severe vomiting"
+        ],
+        "llm_prompt_type": "Ask clarifying questions, suggest immediate medical intervention",
+        "system_actions": [
+          "Call 911",
+          "Log symptoms",
+          "Notify caretaker"
+        ],
+        "agent_behavior": "Calm, assertive, focused on rapid triage",
+        "response_time": "Immediate (< 15 seconds)",
+        "communication_mode": "Voice + Mobile notification",
+        "recommended_devices": ["Smartphone", "Voice assistant", "Tablet"],
+        "escalation": "Escalate to 911 if immediate care is needed",
+        "escalation_threshold": {
+          "temperature_celsius": 39.5,
+          "vomiting_duration_minutes": 20
+        },
+        "agent_actions": [
+          "call_911",
+          "call_caretaker",
+          "create_transcript",
+          "call_ambulance",
+          "request_pharma_uber",
+          "activate_video"
+        ]
+      },
+      {
+        "id": "cat-003",
+        "category": "Natural Catastrophes",
+        "severity": "Level 4 – Critical",
+        "examples": [
+          "Earthquake",
+          "Tsunami",
+          "Flood",
+          "Severe storm"
+        ],
+        "llm_prompt_type": "Urgent: Initiate evacuation and guide user to safety",
+        "system_actions": [
+          "Sound alarm",
+          "Unlock doors",
+          "Notify emergency contact",
+          "Activate video"
+        ],
+        "agent_behavior": "Commanding and concise",
+        "response_time": "Instant (< 5 seconds)",
+        "communication_mode": "Alarm + Voice + SMS",
+        "recommended_devices": ["Home security system", "Voice assistant", "Smart lock"],
+        "escalation": "Auto-call 911 or emergency services if unresponsive",
+        "escalation_threshold": {
+          "user_response_time_seconds": 15
+        },
+        "agent_actions": [
+          "call_911",
+          "call_taxi",
+          "notify_emergency_contact",
+          "sound_alarm",
+          "create_transcript",
+          "activate_video",
+          "call_ambulance",
+          "call_number"
+        ]
+      },
+      {
+        "id": "cat-004",
+        "category": "Fire or Gas Leak",
+        "severity": "Level 4 – Critical",
+        "examples": [
+          "Fire in the kitchen",
+          "Gas leak detected",
+          "Smoke in the house"
+        ],
+        "llm_prompt_type": "Urgent: Evacuate immediately and guide user to safety",
+        "system_actions": [
+          "Sound alarm",
+          "Unlock doors",
+          "Notify emergency contact",
+          "Call 911",
+          "Deactivate gas supply"
+        ],
+        "agent_behavior": "Direct, high urgency",
+        "response_time": "Instant",
+        "communication_mode": "Alarm + Voice + SMS",
+        "recommended_devices": ["Smoke detector", "Smart lock", "Gas shutoff"],
+        "escalation": "Auto-call 911 if unresponsive",
+        "escalation_threshold": {
+          "gas_sensor_ppm": 50,
+          "fire_detected": true,
+          "user_response_time_seconds": 10
+        },
+        "agent_actions": [
+          "call_911",
+          "sound_alarm",
+          "unlock_doors",
+          "create_transcript",
+          "call_number",
+          "call_ambulance",
+          "notify_emergency_contact",
+          "activate_video"
+        ]
+      },
+      {
+        "id": "cat-005",
+        "category": "Terrorist Attack / Active Threat",
+        "severity": "Level 5 – Emergency",
+        "examples": [
+          "Active shooter",
+          "Bomb threat",
+          "Hostage situation"
+        ],
+        "llm_prompt_type": "Urgent: Initiate safety protocols, secure location",
+        "system_actions": [
+          "Lock doors",
+          "Sound alarm",
+          "Notify emergency contact",
+          "Activate video"
+        ],
+        "agent_behavior": "Decisive, stealth-aware",
+        "response_time": "Instant",
+        "communication_mode": "Silent alert + SMS + App push",
+        "recommended_devices": ["Smart locks", "Panic button", "Security cameras"],
+        "escalation": "Auto-call emergency services if unresponsive",
+        "escalation_threshold": {
+          "user_response_time_seconds": 5,
+          "threat_confirmed": true
+        },
+        "agent_actions": [
+          "lock_doors",
+          "sound_alarm",
+          "notify_emergency_contact",
+          "create_transcript",
+          "call_911",
+          "activate_video"
+        ]
+      }
+    ]
+  }
+  
