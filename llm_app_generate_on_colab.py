@@ -27,8 +27,8 @@ class EmergencyReport(BaseModel):
     user_description: str
     perceived_severity: str
 
-# Update with your ngrok Colab URL
-COLAB_URL = "https://a406-34-82-107-11.ngrok-free.app/generate"
+# Update with your cloudflare Colab URL
+COLAB_URL = "https://bridge-furnishings-of-holdings.trycloudflare.com/generate"
 
 @app.post("/handle_emergency")
 async def handle_emergency(report: EmergencyReport):

@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # FastAPI endpoint URL (replace with your actual URL or ngrok URL if on Colab)
-API_URL = "http://localhost:8000/handle_emergency"
+API_URL = "http://localhost:9000/handle_emergency"
 
 st.set_page_config(page_title="Guardian Agent Chatbot", page_icon="🛟")
 st.title("🛟 Guardian Agent Chatbot")

@@ -93,6 +93,7 @@ def generate_llm_prompt_response(category: dict, user_input: str) -> str:
         )["choices"][0]["message"]["content"]'''
     return response
 
+# TODO: modify when changing to actions_android
 def execute_action(action: str, description: str) -> str:
     if action == "call_911": return call_911(description)
     if action == "create_transcript_for_911": return create_transcript(description, "911")
