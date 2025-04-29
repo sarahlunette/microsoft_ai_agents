@@ -1,0 +1,19 @@
+Action Name,Description,Urgency Level
+call_number,Call number action.,Level 3
+call_911,Call 911 action.,Critical
+call_caretaker,Call caretaker action.,Level 3
+activate_video,Activate video action.,Level 2
+ask_for_details,Ask for details action.,Level 1
+call_taxi,Call taxi action.,Level 3
+call_ambulance,Call ambulance action.,Level 3
+request_pharma_uber,Request pharma uber action.,Level 1
+call_sos_medecin,Call sos medecin action.,Level 3
+locate_pharmacy,Locate pharmacy action.,Level 1
+create_transcript,Create transcript action.,Level 1
+cancel_action,Cancel action action.,Level 1
+schedule_followup,Schedule followup action.,Level 1
+send_email_alert,Send email alert action.,Level 1
+track_delivery,Track delivery action.,Level 1
+alert_nearby_helper,Alert nearby helper action.,Level 1
+share_location,Share location action.,Level 1
+send_sms,Send sms action.,Level 1

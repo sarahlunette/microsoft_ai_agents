@@ -1,0 +1,51 @@
+Case ID,User Input,Emergency Type,Chatbot Response,Suggested Action,Urgency
+001,My mom just collapsed and isn't breathing!,Medical,This is a medical emergency. Call 911 immediately. I can guide you through CPR steps.,Call 911 + CPR guidance,High
+002,I cut myself badly while cooking and it's bleeding a lot.,Medical,"Apply pressure to the wound. If bleeding doesn't stop, go to the ER or call 911.",First aid + ER/911,High
+003,I smell smoke and see flames in the kitchen!,Fire,Please evacuate the building immediately and call 911 to report a fire.,Evacuate + Call 911,High
+004,I received a message asking for my bank info claiming it's from my bank.,Fraud,Do not provide any information. Contact your bank directly to verify the message.,Bank contact + Do not respond,Medium
+005,I received a message asking for my bank info claiming it's from my bank.,Fraud,Do not provide any information. Contact your bank directly to verify the message.,Bank contact + Do not respond,Medium
+006,I received a message asking for my bank info claiming it's from my bank.,Fraud,Do not provide any information. Contact your bank directly to verify the message.,Bank contact + Do not respond,Medium
+007,I'm feeling really overwhelmed and thinking dark thoughts.,Mental Health,You're not alone. I’m here for you. Would you like me to connect you to a crisis line?,Connect to mental health support,High
+008,Someone just stole my wallet and ran!,Assault,Please ensure you're safe and call 911 to report the theft and provide a description.,Call 911,High
+009,I think I have food poisoning. I can't stop vomiting.,Medical,"Stay hydrated. If symptoms persist or worsen, go to urgent care or call a doctor.",Advice + Urgent care recommendation,Medium
+010,I think I have food poisoning. I can't stop vomiting.,Medical,"Stay hydrated. If symptoms persist or worsen, go to urgent care or call a doctor.",Advice + Urgent care recommendation,Medium
+011,I'm being stalked and I’m scared.,Assault,"You’re not alone. If you’re in immediate danger, call 911. I can help find local support services.",Call 911 + Connect to services,High
+012,There’s a strong gas smell in my apartment.,Environmental Hazard,Evacuate immediately and call the gas company or emergency services.,Evacuate + Call gas company,High
+013,I think I have food poisoning. I can't stop vomiting.,Medical,"Stay hydrated. If symptoms persist or worsen, go to urgent care or call a doctor.",Advice + Urgent care recommendation,Medium
+014,There’s a strong gas smell in my apartment.,Environmental Hazard,Evacuate immediately and call the gas company or emergency services.,Evacuate + Call gas company,High
+015,I'm being stalked and I’m scared.,Assault,"You’re not alone. If you’re in immediate danger, call 911. I can help find local support services.",Call 911 + Connect to services,High
+016,I received a message asking for my bank info claiming it's from my bank.,Fraud,Do not provide any information. Contact your bank directly to verify the message.,Bank contact + Do not respond,Medium
+017,I smell smoke and see flames in the kitchen!,Fire,Please evacuate the building immediately and call 911 to report a fire.,Evacuate + Call 911,High
+018,I smell smoke and see flames in the kitchen!,Fire,Please evacuate the building immediately and call 911 to report a fire.,Evacuate + Call 911,High
+019,I cut myself badly while cooking and it's bleeding a lot.,Medical,"Apply pressure to the wound. If bleeding doesn't stop, go to the ER or call 911.",First aid + ER/911,High
+020,I smell smoke and see flames in the kitchen!,Fire,Please evacuate the building immediately and call 911 to report a fire.,Evacuate + Call 911,High
+021,I'm being stalked and I’m scared.,Assault,"You’re not alone. If you’re in immediate danger, call 911. I can help find local support services.",Call 911 + Connect to services,High
+022,There’s a strong gas smell in my apartment.,Environmental Hazard,Evacuate immediately and call the gas company or emergency services.,Evacuate + Call gas company,High
+023,I think I have food poisoning. I can't stop vomiting.,Medical,"Stay hydrated. If symptoms persist or worsen, go to urgent care or call a doctor.",Advice + Urgent care recommendation,Medium
+024,I cut myself badly while cooking and it's bleeding a lot.,Medical,"Apply pressure to the wound. If bleeding doesn't stop, go to the ER or call 911.",First aid + ER/911,High
+025,I'm being stalked and I’m scared.,Assault,"You’re not alone. If you’re in immediate danger, call 911. I can help find local support services.",Call 911 + Connect to services,High
+026,I'm feeling really overwhelmed and thinking dark thoughts.,Mental Health,You're not alone. I’m here for you. Would you like me to connect you to a crisis line?,Connect to mental health support,High
+027,I think I have food poisoning. I can't stop vomiting.,Medical,"Stay hydrated. If symptoms persist or worsen, go to urgent care or call a doctor.",Advice + Urgent care recommendation,Medium
+028,I think I have food poisoning. I can't stop vomiting.,Medical,"Stay hydrated. If symptoms persist or worsen, go to urgent care or call a doctor.",Advice + Urgent care recommendation,Medium
+029,I think I have food poisoning. I can't stop vomiting.,Medical,"Stay hydrated. If symptoms persist or worsen, go to urgent care or call a doctor.",Advice + Urgent care recommendation,Medium
+030,I received a message asking for my bank info claiming it's from my bank.,Fraud,Do not provide any information. Contact your bank directly to verify the message.,Bank contact + Do not respond,Medium
+031,I'm being stalked and I’m scared.,Assault,"You’re not alone. If you’re in immediate danger, call 911. I can help find local support services.",Call 911 + Connect to services,High
+032,I'm feeling really overwhelmed and thinking dark thoughts.,Mental Health,You're not alone. I’m here for you. Would you like me to connect you to a crisis line?,Connect to mental health support,High
+033,I received a message asking for my bank info claiming it's from my bank.,Fraud,Do not provide any information. Contact your bank directly to verify the message.,Bank contact + Do not respond,Medium
+034,My mom just collapsed and isn't breathing!,Medical,This is a medical emergency. Call 911 immediately. I can guide you through CPR steps.,Call 911 + CPR guidance,High
+035,I received a message asking for my bank info claiming it's from my bank.,Fraud,Do not provide any information. Contact your bank directly to verify the message.,Bank contact + Do not respond,Medium
+036,I received a message asking for my bank info claiming it's from my bank.,Fraud,Do not provide any information. Contact your bank directly to verify the message.,Bank contact + Do not respond,Medium
+037,There’s a suspicious person loitering near my house.,Assault,"Stay inside, lock your doors, and consider calling non-emergency police to report.",Call non-emergency police,Medium
+038,I smell smoke and see flames in the kitchen!,Fire,Please evacuate the building immediately and call 911 to report a fire.,Evacuate + Call 911,High
+039,I'm being stalked and I’m scared.,Assault,"You’re not alone. If you’re in immediate danger, call 911. I can help find local support services.",Call 911 + Connect to services,High
+040,I smell smoke and see flames in the kitchen!,Fire,Please evacuate the building immediately and call 911 to report a fire.,Evacuate + Call 911,High
+041,I cut myself badly while cooking and it's bleeding a lot.,Medical,"Apply pressure to the wound. If bleeding doesn't stop, go to the ER or call 911.",First aid + ER/911,High
+042,There’s a suspicious person loitering near my house.,Assault,"Stay inside, lock your doors, and consider calling non-emergency police to report.",Call non-emergency police,Medium
+043,I'm feeling really overwhelmed and thinking dark thoughts.,Mental Health,You're not alone. I’m here for you. Would you like me to connect you to a crisis line?,Connect to mental health support,High
+044,My mom just collapsed and isn't breathing!,Medical,This is a medical emergency. Call 911 immediately. I can guide you through CPR steps.,Call 911 + CPR guidance,High
+045,I smell smoke and see flames in the kitchen!,Fire,Please evacuate the building immediately and call 911 to report a fire.,Evacuate + Call 911,High
+046,I smell smoke and see flames in the kitchen!,Fire,Please evacuate the building immediately and call 911 to report a fire.,Evacuate + Call 911,High
+047,There’s a suspicious person loitering near my house.,Assault,"Stay inside, lock your doors, and consider calling non-emergency police to report.",Call non-emergency police,Medium
+048,I think I have food poisoning. I can't stop vomiting.,Medical,"Stay hydrated. If symptoms persist or worsen, go to urgent care or call a doctor.",Advice + Urgent care recommendation,Medium
+049,There’s a strong gas smell in my apartment.,Environmental Hazard,Evacuate immediately and call the gas company or emergency services.,Evacuate + Call gas company,High
+050,I received a message asking for my bank info claiming it's from my bank.,Fraud,Do not provide any information. Contact your bank directly to verify the message.,Bank contact + Do not respond,Medium

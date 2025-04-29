@@ -32,7 +32,7 @@ class EmergencyReport(BaseModel):
     perceived_severity: str
 
 # Update with your Colab / Cloudflare endpoint
-COLAB_URL = "https://bridge-furnishings-of-holdings.trycloudflare.com/generate"
+COLAB_URL = "https://recipe-strings-grave-processing.trycloudflare.com/generate"
 
 @app.post("/handle_emergency")
 async def handle_emergency(report: EmergencyReport):
@@ -89,8 +89,15 @@ def generate_llm_prompt_response(category: dict, user_input: str) -> str:
         f"Severity: {category['severity']}\n"
         f"User description: {user_input}\n"
         f"Prompt type: {category.get('llm_prompt_type', '')}\n"
+        f"Your task: Decide whether a predefined system action should be executed, or if a chatbot response is more appropriate.\n\n"
+        f"If a predefined action is needed, respond in this format:\n"
+        f"Action: <one of ['call_911', 'create_transcript', 'create_transcript_for_911', 'create_transcript_for_caretaker', 'call_caretaker', 'activate_video', 'ask_details', 'ask_for_photo_input', 'call_taxi', 'call_ambulance', 'request_pharma_uber', 'call_sos_medecin', 'locate_open_pharmacy', 'sound_alarm', 'unlock_doors', 'notify_emergency_contact']>\n"
+        f"Description: <short explanation of why this action is necessary>\n\n"
+        f"If no action is needed, respond instead with:\n"
+        f"Chatbot Response: <natural language helpful response>\n\n"
         f"Suggested system action?"
     )
+
 
     try:
         response = requests.post(COLAB_URL, json={"prompt": prompt})
@@ -119,3 +126,8 @@ def execute_action(action: str, description: str) -> str:
         if action == "sound_alarm": return sound_alarm()
         if action == "unlock_doors": return unlock_doors()
         if action == "notify_emergency_contact": return
+
+    except Exception as e:
+        return f"Error executing action {action}: {str(e)}"
+
+#TODO: make sure action triggers work
