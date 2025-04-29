@@ -1,2 +1,4 @@
 config.yml
 config
+mobile_app/.buildozer
+mobile_app/bin
