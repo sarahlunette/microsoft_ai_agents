@@ -7,3 +7,7 @@ In order to create the colab api, you'll have to run the with_cloudflared.iynb o
 Then, in local, launch uvicorn llm_app_generated_on_colab:app --port 9000 (attention port changes so that there is no problem with the local launch on colab, which may or may not be the case).
 
 Then, in local again, launch streamlit demo as streamlit run demo.py
+
+In the complete_app folder, you should run buildozer init and then buildozer android debug
+
+With OpenMTP put the application on your phone, in the download folder (this is on Google Phone) and install it (the API version) calling onto colab (so you will have to modify the link to cloudfare everytime and repackage and reinstall the application).
