@@ -2,3 +2,5 @@ config.yml
 config
 mobile_app/.buildozer
 mobile_app/bin
+complete_app/.buildozer
+complete_app/bin

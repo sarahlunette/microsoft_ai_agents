@@ -4,16 +4,12 @@ import whisper
 import json
 import yaml
 import requests
-from emergency_agent import (
-    match_emergency_category,
-    generate_llm_prompt_response,
-    execute_action
-)
+from emergency_agent import match_emergency_category, generate_llm_prompt_response, execute_action
 
 app = FastAPI(title="Guardian Agent Chatbot (Colab LLM only)")
 
 # Load emergency protocol
-with open('home_emergency_protocol_with_agent_actions.json') as f:
+with open('home_emergency_protocol_with_agent_actions_completed.json') as f:
     EMERGENCY_PROTOCOL = json.load(f)
 
 # Load API key config (optional)

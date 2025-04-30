@@ -2,11 +2,11 @@ import json
 import requests
 
 # Load emergency protocol
-with open('home_emergency_protocol_with_agent_actions.json') as f:
+with open('home_emergency_protocol_with_agent_actions_completed.json') as f:
     EMERGENCY_PROTOCOL = json.load(f)
 
 # Update with your Colab / Cloudflare endpoint
-COLAB_URL = "https://recipe-strings-grave-processing.trycloudflare.com/generate"
+COLAB_URL = "https://observer-sbjct-random-favourite.trycloudflare.com/generate"
 
 def match_emergency_category(description: str, severity_hint: str = None) -> dict:
     for category in EMERGENCY_PROTOCOL["categories"]:
@@ -41,7 +41,7 @@ def generate_llm_prompt_response(category: dict, user_input: str) -> str:
 
 def execute_action(action: str, description: str) -> str:
     try:
-        from actions_android import (
+        from actions_android_completed import (
             call_911, create_transcript, call_caretaker, activate_video, ask_for_details,
             call_taxi, call_ambulance, request_pharma_uber, call_sos_medecin, locate_pharmacy,
             cancel_action, schedule_followup, send_email_alert, track_delivery,
@@ -57,6 +57,19 @@ def execute_action(action: str, description: str) -> str:
         if action == "ask_for_photo_input": return ask_for_details(input_type="photo")
         if action == "call_taxi": return call_taxi()
         if action == "call_ambulance": return call_ambulance()
-        if action == "request_pharma_uber": return request_pharma_uber(description
-::contentReference[oaicite:1]{index=1}
- 
+        if action == "request_pharma_uber": return request_pharma_uber(description)
+        if action == "call_sos_medecin": return call_sos_medecin()
+        if action == "locate_open_pharmacy": return locate_pharmacy()
+        #if action == "sound_alarm": return sound_alarm()
+        #if action == "unlock_doors": return unlock_doors()
+        #if action == "notify_emergency_contact": return notify_emergency_contact()
+        if action == "cancel_action": return cancel_action()
+        if action == "schedule_followup": return schedule_followup()
+        if action == "send_email_alert": return send_email_alert()
+        if action == "track_delivery": return track_delivery()
+        if action == "alert_nearby_helper": return alert_nearby_helper()
+        if action == "share_location": return share_location()
+        if action == "send_sms": return send_sms()
+    except Exception as e:
+        return f"Error executing action {action}: {str(e)}"
+    return f"Unknown action: {action}"
