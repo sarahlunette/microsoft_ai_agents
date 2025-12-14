@@ -1,5 +1,4 @@
 # Microsoft AI Agents
-
 A collection of AI agent experiments, notebooks, and demo applications that explore building autonomous agents using modern open‑source large language models (LLMs) and orchestration tools.
 
 This repository provides runnable examples, demo apps, and workflows to help you prototype and experiment with AI agent ideas — from basic LLM prompting to full API + mobile integrations.
@@ -30,38 +29,49 @@ The core demos include:
 ## 🚀 Quick Start
 
 ### 🛠️ Prerequisites
-
 Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ````
 
-> Recommended Python versions: **3.10+**
+Recommended Python versions: 3.10+
 
 ---
 
 ### 🧪 Running the Notebook
 
-1. Open Jupyter or Colab.
-2. Navigate into the `notebooks/` directory.
-3. Run the notebook(s) to experiment with LLM prompts and agent logic.
+* Open Jupyter or Colab.
+* Navigate into the `notebooks/` directory.
+* Use `LLM_app.py` (uncleaned version):
+
+  * Skip the sections marked "skip"
+  * Stop after the `snapshot_downloads` section to run the cells
+
+---
+
+### 🌐 Creating the Colab API
+
+1. Open `with_cloudflared.ipynb` on Colab.
+2. Run the notebook to expose the model via Cloudflare.
+3. Copy the external Cloudflare URL.
+4. Paste the URL in `llm_app_generate_on_colab.py` under `COLAB_URL`.
 
 ---
 
 ### 🖥️ Running the API Backend Locally
 
-This project includes a simple API you can launch locally:
+Launch the API locally:
 
 ```bash
-uvicorn llm_app_generated_on_colab:app --reload --port 9000
+uvicorn llm_app_generated_on_colab:app --port 9000
 ```
 
-You can then send requests from any client to the running server.
+> ⚠️ Make sure the port is changed to avoid conflicts with Colab connections.
 
 ---
 
-### 📱 Running the Demo (Streamlit)
+### 📱 Running the Streamlit Demo
 
 Start the interactive demo:
 
@@ -73,11 +83,9 @@ This opens a UI where you can interact with the AI agent in your browser.
 
 ---
 
-## 📲 Building the Android Demo
+### 📲 Building the Android Demo
 
 The `complete_app/` folder contains a Buildozer configuration for packaging a demo Android app.
-
-To build (Linux/macOS):
 
 ```bash
 cd complete_app
@@ -85,7 +93,9 @@ buildozer init
 buildozer android debug
 ```
 
-Install the generated `.apk` on a device to test the mobile experience.
+* Use OpenMTP to copy the generated `.apk` to your device (Downloads folder on a Google phone).
+* Install the APK to test the mobile experience.
+* **Important:** Modify the Cloudflare link in the app if the Colab API changes, then repackage and reinstall the APK.
 
 ---
 
@@ -94,11 +104,9 @@ Install the generated `.apk` on a device to test the mobile experience.
 This project combines:
 
 * **LLM inference** — via accessible models like Zephyr, BioMistral, or HuggingFace models.
-* **Agent logic** — Py notebooks and Python functions that demonstrate task delegation to models.
+* **Agent logic** — Python notebooks demonstrating task delegation to models.
 * **Interactive UI** — Streamlit for quick UX iteration.
 * **Mobile integration** — Buildozer + Python backend for Android prototyping.
-
-This is ideal for experimentation and learning how to build more capable autonomous systems.
 
 ---
 
@@ -106,24 +114,22 @@ This is ideal for experimentation and learning how to build more capable autonom
 
 Listed in `requirements.txt`. Typical entries include:
 
-```text
-fastapi
-uvicorn
-streamlit
-openai / huggingface client
-...
-```
+* fastapi
+* uvicorn
+* streamlit
+* openai / huggingface client
+* ...
 
-(Be sure to adjust based on your runtime / chosen model provider.)
+> Adjust dependencies based on your runtime and chosen model provider.
 
 ---
 
 ## 📚 Resources & Inspiration
 
-This project is inspired by modern **AI agent frameworks** that let LLMs act as autonomous helpers — coordinating tasks and tools to solve problems. Examples include:
+Inspired by modern AI agent frameworks that let LLMs act as autonomous helpers:
 
-* **Microsoft Agent Framework** — a comprehensive multi‑language agent ecosystem for Python and .NET. ([GitHub][1])
-* **AI agent learning materials and courses** — such as Microsoft’s AI Agents for Beginners series. ([GitHub][2])
+* Microsoft Agent Framework — multi-language agent ecosystem for Python and .NET ([GitHub](https://github.com/microsoft/AI-Agents))
+* AI agent learning materials and courses — such as Microsoft’s AI Agents for Beginners series ([GitHub](https://github.com/microsoft/AI-Agents))
 
 ---
 
@@ -140,23 +146,6 @@ Please open issues or pull requests.
 
 ---
 
-## 📄 License
-
-Distributed under the terms of the MIT License.
-
----
-
 ## ❓ Questions
 
 If you need help getting started, drop a GitHub issue — happy to help!
-
-```
-
----
-
-If you want, I can also generate **badges** (CI, license, PyPI), a **template issue/PR**, or a **detailed architecture diagram** to include in the README.
-::contentReference[oaicite:2]{index=2}
-```
-
-[1]: https://github.com/microsoft/agent-framework?utm_source=chatgpt.com "GitHub - microsoft/agent-framework: A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET."
-[2]: https://github.com/microsoft/ai-agents-for-beginners?utm_source=chatgpt.com "GitHub - microsoft/ai-agents-for-beginners: 12 Lessons to Get Started Building AI Agents"
